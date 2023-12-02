@@ -21,8 +21,8 @@ export const TransactionPane: TransactionPaneComponent = ({
       <InputCheckbox
         id={transaction.id}
         checked={approved}
-        // disabled={loading}
-        disabled={false}
+        disabled={loading}
+        // disabled={paginatedTransactionsUtils.loading || paginatedTransactions?.nextPage == null || transactionsByEmployee?.length === 0}
         onChange={async (newValue) => {
           console.log(`Before setTransactionApproval. approved: ${approved}, newValue: ${newValue}`);
           await consumerSetTransactionApproval({
