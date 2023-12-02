@@ -16,7 +16,7 @@ export function App() {
 
   const transactions = useMemo(
     // () => paginatedTransactions?.data ?? transactionsByEmployee ?? null,
-    // [paginatedTransactions, transactionsByEmployee]
+    // [paginatedTransactions, transactionsByEmployee],
     () => {
       if (paginatedTransactions && paginatedTransactions.data) {
         return paginatedTransactions.data;
